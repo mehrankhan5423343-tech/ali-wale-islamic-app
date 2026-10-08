@@ -4,7 +4,9 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -50,11 +52,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.R
 import com.example.data.content.DailyContentData
 import com.example.data.model.AsrJuristic
 import com.example.data.model.CalculationMethod
@@ -129,16 +134,19 @@ fun OnboardingScreen(
                         ) {
                             Box(
                                 modifier = Modifier
-                                    .size(90.dp)
+                                    .size(108.dp)
                                     .clip(CircleShape)
-                                    .background(MaterialTheme.colorScheme.primaryContainer),
+                                    .border(2.dp, IslamicGold, CircleShape)
+                                    .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Icon(
-                                    imageVector = Icons.Default.Mosque,
-                                    contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.primary,
-                                    modifier = Modifier.size(46.dp)
+                                Image(
+                                    painter = painterResource(id = R.drawable.ic_islamic_emblem_round),
+                                    contentDescription = "Ali wale Islamic Emblem",
+                                    contentScale = ContentScale.Crop,
+                                    modifier = Modifier
+                                        .size(104.dp)
+                                        .clip(CircleShape)
                                 )
                             }
 
