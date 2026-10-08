@@ -1,0 +1,6 @@
+{
+  "name": "Ali wale",
+  "description": "A modern Islamic companion for spiritual growth, prayer tracking, Quran reading, daily dhikr, duas, habits, and muhasabah reflection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
